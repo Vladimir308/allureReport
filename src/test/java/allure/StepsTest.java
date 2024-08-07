@@ -39,6 +39,7 @@ public class StepsTest {
 
     @Test
     public void annotatedStepTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
         WebSteps steps = new WebSteps();
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
